@@ -1,0 +1,68 @@
+
+REQUIREMENTS && DB STRUCTURE
+- Admin
+  + Admin with type SUPER can create new admin
+  + Approve a business
+  + View number of registered businesses and clients
+  + View number of pending request, rejected request and accepted request
+  + View number of businesses and clients who are or were online
+  + Update login details
+  + Reset password
+
+
+- Business
+  + register(id, name, email, mobile, type, about, portfolio_website, fb_fan_page, ig_fan_page, created_at, updated_at, approved)
+  + service(id, buid, name, about, images, created_at, updated_at)
+  + login(id, email, password, type, created_at, updated_at)
+  + tracker(id, usid, type, logged_in_at, logged_out_out)
+  + acreq(id, boid, buid, created_at) see by business **
+  + rereq(id, boid, buid, created_at) see by business **
+  + Update business and login details
+  + Reset password
+
+
+- Client
+  + register(id, name, email, mobile)
+  + bookings(id, clid, type, location, brief_description, start_date, end_date, payment, created_at, updated_at)
+  + preq(id, boid, buid, created_at) see by client ** move to acreq when accepted or rereq when rejected
+  + Update login details
+  + Reset password
+
+
+API ROUTES
+1. ADMIN:
+   i. Add admin
+      - HTTP Method: POST
+      - Route: /create/new-admin
+      - Request Body:
+        {
+
+
+        }
+
+   - Get /query/admins
+   - Get /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
